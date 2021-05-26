@@ -43,12 +43,15 @@ def get_raw_functions(data: Iterable[str]) -> List[str]:
 
 
 def is_nim_function(raw_name: str) -> bool:
+    if "tyObject" in raw_name   : return True
+
     if raw_name.startswith("0x"): return False
-    if raw_name.startswith("_"): return False
-    if "std::" in raw_name     : return False
-    if raw_name.startswith("("): return False
-    if not has_number(raw_name): return False
+    if raw_name.startswith("_") : return False
+    if "std::" in raw_name      : return False
+    if raw_name.startswith("(") : return False
+    if not has_number(raw_name) : return False
     if re.search(r"_[a-zA-Z]+Z\w*\w", raw_name) is None: return False
+    
     return True
 
 
