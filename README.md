@@ -8,7 +8,7 @@ A small utility to demangle Nim symbols from callgrind files.
 
 Run your (Nim) program with something like this:
 
-    valgrind --tool=callgrind bin/minps_callgrind
+    valgrind --tool=callgrind executable
 
 Then generate a demangled output file with:
 
