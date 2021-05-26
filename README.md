@@ -21,7 +21,7 @@ Then generate a demangled output file with:
 - Extracts proper function names.
 - Extracts module names (added between [] afterwards).
 
-## TODO:
+## TODO
 
 - [ ] Port the utility Nim once stabilized :)
 - [ ] Add support for missing Nim types.
