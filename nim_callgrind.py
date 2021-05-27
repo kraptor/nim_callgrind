@@ -110,6 +110,7 @@ def get_parameter(param: str) -> str:
         return f"{prefix} seq".strip()
 
     param = param.replace("NimStringV2", "string")
+    param = param.replace("StreamObj", "Stream")
     param = param.replace("unsigned char", "byte")
     param = param.replace("unsigned int", "uint")
 
